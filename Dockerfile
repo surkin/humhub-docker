@@ -1,7 +1,7 @@
 # Humhub on Turnkeylinux
 
 FROM cboulanger/turnkeylinux-lamp:v14.0
-MAINTAINER Christian Boulanger "info@bibliograph.org"
+MAINTAINER Thomas Kobert "thomas.kobert@salt.ch"
 
 ENV DEBIAN_FRONTEND noninteractive
 

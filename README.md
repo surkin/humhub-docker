@@ -10,11 +10,11 @@ MySql is configured with a **humhub** database with a **humhub** user with a **H
 
 Build it:
 
-```docker build -t cboulanger/humhub-docker .```
+```docker build -t surkin/humhub-docker .```
 
 an run it:
 
-```docker run --name humhub -d cboulanger/humhub-docker && docker inspect humhub | grep IPAddress```
+```docker run --name humhub -d surkin/humhub-docker && docker inspect humhub | grep IPAddress```
 
 ## Data migration
 
@@ -27,4 +27,4 @@ You can also [migrate data from and to a different container](humhub-data/readme
 
 ## Turnkey Backup et Migration
 - Since the basis of this image is Turnkey Linux, the automated backup tool [TKLBAM](https://www.turnkeylinux.org/docs/tklbam) is available out of the box.
-- If you use TKLBAM, make sure to include any SSL-Certificates in the backup, otherwise the apache server will not start if you restore the backup to another machine. In the current setup, you need to add `/humhub/data/*.crt` and `/humhub-data/*.key` to `/etc/tklbam/overrides`. 
+- If you use TKLBAM, make sure to include any SSL-Certificates in the backup, otherwise the apache server will not start if you restore the backup to another machine. In the current setup, you need to add `/humhub/data/*.crt` and `/humhub-data/*.key` to `/etc/tklbam/overrides`.
