@@ -1,7 +1,7 @@
 # Humhub on Turnkeylinux
 
 FROM cboulanger/turnkeylinux-lamp:v14.0
-MAINTAINER Thomas Kobert "thomas.kobert@salt.ch"
+MAINTAINER Thomas Kobert "tkobert@icloud.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -9,9 +9,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get install -y -q php5-gd php5-curl php5-sqlite php5-ldap php5-intl php-apc wget cron
 
-ENV HUMHUB_VERSION 1.0.0-beta.2
-ENV HUMHUB_DIR_NAME humhub-$HUMHUB_VERSION
-ENV HUMHUB_DOWNLOAD_URL http://downloads.sourceforge.net/project/humhub/$HUMHUB_DIR_NAME.tar.gz
+ENV HUMHUB_VERSION v1.1.0-beta.1
+ENV HUMHUB_DOWNLOAD_URL https://github.com/humhub/humhub/archive/$HUMHUB_VERSION.tar.gz
 
 RUN rm -rf /var/www/*
 RUN wget -q $HUMHUB_DOWNLOAD_URL
